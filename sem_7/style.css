@@ -1,0 +1,9 @@
+.block1 + p + p {
+	color: blue;
+}
+
+@media (width < 500px) {
+	p {
+		color: brown;
+	}
+}
