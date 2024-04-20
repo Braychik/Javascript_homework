@@ -134,3 +134,26 @@ const isPasswordValid = createPasswordChecker(8);
 console.log(isPasswordValid('password')); // Ожидаемый результат:
 false
 console.log(isPasswordValid('secret')); // Ожидаемый результат: true
+
+
+
+
+        // задание 5 №2
+
+        // Напишите рекурсивную функцию sumDigits, которая принимает
+        // положительное целое число в качестве аргумента и возвращает
+        // сумму его цифр.
+
+        function sumDigits(num) {
+            // деелаем проверку если число < 10 значит оно состоит из одного знака и делить на 10 уже нечего, это является остановкой цикла
+            if (num < 10) {
+                return num;
+            } else {
+                // складываем остаток от делени числа num с вызовом функции sumDigit, в которое передается число уже поделенное на 10
+                return (num % 10) + sumDigits(Math.floor(num / 10));
+            }
+        }
+ 
+        // Пример использования:
+        console.log(sumDigits(123)); // 6 (1 + 2 + 3)
+        console.log(sumDigits(456789)); // 39 (4 + 5 + 6 + 7 + 8 + 9)
