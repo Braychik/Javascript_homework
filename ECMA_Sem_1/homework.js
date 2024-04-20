@@ -50,4 +50,4 @@ const rootElement = document.getElementById('root');
 const targetElement = findElementByClass(rootElement, 'class2');
 console.log(targetElement);
 
-// третье задание подсмотрел
+// третье задание подсмотрел и то неправильно ))
